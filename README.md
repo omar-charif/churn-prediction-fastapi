@@ -19,8 +19,14 @@ The project trains a `RandomForestClassifier`, saves it with Joblib, and serves 
 ## Setup
 
 ```bash
-python -m venv .venv
-pip install -r requirements.txt
+uv sync
+```
+
+Format and lint the project:
+
+```bash
+uv run ruff format .
+uv run ruff check .
 ```
 
 ## Train and save the model
@@ -48,7 +54,7 @@ Open:
 Example:
 
 ```bash
-curl -X POST "http://127.0.0.1:8000/predict?age=45&monthly_charges=80&contract_length=24&support_calls=3"
+curl -X POST "http://127.0.0.1:98000/predict?age=45&monthly_charges=80&contract_length=24&support_calls=3"
 ```
 
 Example response:
