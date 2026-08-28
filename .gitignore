@@ -149,3 +149,5 @@ activemq-data/
 # Environments
 .env
 .DS_Store
+.venv
+.idea
